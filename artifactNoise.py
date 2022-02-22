@@ -6,8 +6,8 @@ import plotly.graph_objs as go
 from plotly.subplots import make_subplots
 import numpy as np
 from transforms import Wavelet
-from decodeLeads import getNbeats
-
+from xmlExtract import getNbeats
+import emd
 
 def CEEMD(signal):
     imfs, noise = emd.sift.complete_ensemble_sift(signal.numpy())
